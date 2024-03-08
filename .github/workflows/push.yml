@@ -11,7 +11,12 @@ jobs:
   icon_automation:
     name: figma icon automation
     runs-on: ubuntu-latest
+    environment: GD
     steps:
+    - run: echo "${{ secrets.FIGMA_FILE_URL }}"
+    - run: echo "${{ secrets.FIGMA_TOKEN }}"
+    - run: echo "${{ secrets.NPM_AUTH_TOKEN }}"
+    - run: echo "${{ secrets.GH_TOKEN }}"
     - uses: actions/checkout@v1
 
     - uses: actions/setup-node@v1
@@ -28,7 +33,7 @@ jobs:
     - run: yarn generate
     - run: yarn build:bundle
     - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
-    - run: yarn publish
+    - run: yarn publish --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     - run: yarn build
