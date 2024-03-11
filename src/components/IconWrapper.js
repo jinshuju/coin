@@ -6,7 +6,11 @@ const IconWrapper = styled.a`
   flex-direction: column;
   align-items: center;
   svg{
+    cursor: pointer;
     margin: 36px 0;
+  }
+  span{
+    cursor: pointer;
   }
 `
 
