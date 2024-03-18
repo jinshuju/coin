@@ -5,7 +5,7 @@ const parseName = (name, defaultStyle) => {
   const style = nameSlices[nameSlices.length - 1]
   return {
     name,
-    componentName: `Icon${upperCamelCase(name)}`,
+    componentName: `Icon${upperCamelCase(name).replace('Stroke', '')}`,
     style: style==='fill' || style==='stroke' ? style : defaultStyle
   }
 }
