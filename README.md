@@ -1,5 +1,7 @@
 # Icon Automation Workflow Using Figma
 
+[![npm version](https://badge.fury.io/js/@gd-uikit%2Fcoin.svg)](https://badge.fury.io/js/@gd-uikit%2Fcoin)
+
 It's a repository for [Figma Icon Automation Plugin](https://github.com/leadream/figma-icon-automation).
 
 ## Development
