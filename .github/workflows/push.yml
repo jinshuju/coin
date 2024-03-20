@@ -6,6 +6,7 @@ on:
     # file paths to consider in the event. Optional; defaults to all.
     paths:
       - package.json
+      - .github/workflows
 
 jobs:
   icon_automation:
